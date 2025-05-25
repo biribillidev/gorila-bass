@@ -42,3 +42,28 @@ h1 {
   gap: 5px;
   justify-content: center;
 }
+
+.humano {
+  width: 30px;
+  height: 30px;
+}
+
+#botoes {
+  margin-top: 30px;
+}
+
+#botoes button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#botoes button:hover {
+  background-color: #2f6b32;
+}
