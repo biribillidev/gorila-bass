@@ -45,6 +45,32 @@ function atacar() {
   }
 }
 
+function ataqueDosHumanos() { 
+  if (humanosRestantes > 0 && vidaGorila > 0) {
+    const dano = Math.floor(Math.random() * 8) + 3;
+    vidaGorila = Math.max(vidaGorila - dano, 0);
+    registrarLog(`💥 Humanos atacaram e causaram ${dano} de dano ao gorila!`);
+    atualizarStatus();
+    verificarFimDeJogo();
+    salvarJogo();
+  }
+}
+
+function defender() {
+  registrarLog("Gorila entrou em postura defensiva.");
+}
+
+function curar() {
+  if (vidaGorila < 100) {
+    const cura = Math.floor(Math.random() * 20) + 10;
+    vidaGorila = Math.min(vidaGorila + cura, 100);
+    registrarLog(`Gorila se curou em ${cura} pontos de vida.`);
+    salvarJogo();
+    atualizarStatus();
+  } else {
+    registrarLog("Gorila já está com vida cheia.");
+  }
+}
 
 
 
