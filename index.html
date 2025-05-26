@@ -4,28 +4,36 @@
   <meta charset="UTF-8">
   <title>Gorila vs 100 Humanos</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="./js/script.js"></script>
+  <script src="./js/script.js" defer></script>
 </head>
 
 <body>
+  <header>
     <h1>Gorila vs 100 Humanos</h1>
-    <div id="status">
-        <p>Vida do Gorila: <span id="vidaGorila">100</span></p>
-        <p>Humanos restantes: <span id="humanosRestantes">100</span></p>
-    </div>
+  </header>
 
-    <div id="batalha">
-        <img src="assets/gorila.png" alt="gorila" id="gorila">
-    <div id="humanos"></div>
-    </div>
-    
-    <div id="botoes">
-        <button id="btnAtacar">Atacar 🥊</button>
-        <button id="btnDefender">Defender 🛡️</button>
-        <button id="btnCurar">Curar 💊</button>
-    </div>
+  <main>
+    <section id="status">
+      <p>Vida do Gorila: <span id="vidaGorila">100</span></p>
+      <p>Humanos restantes: <span id="humanosRestantes">100</span></p>
+    </section>
 
-  <div id="log"></div>
+    <section id="batalha">
+      <img src="assets/gorila.png" alt="gorila" id="gorila">
+      <div id="humanos"></div>
+    </section>
 
+    <section id="botoes">
+      <button id="btnAtacar">Atacar 🥊</button>
+      <button id="btnDefender">Defender 🛡️</button>
+      <button id="btnCurar">Curar 💊</button>
+    </section>
+
+    <section id="registro">
+      <h2>Log da Batalha</h2>
+      <div id="log"></div>
+    </section>
+  </main>
 </body>
+
 </html>
