@@ -107,5 +107,53 @@ function salvarJogo() {
   localStorage.setItem("estadoGorila", JSON.stringify(estado));
 }
 
+function carregarJogo() {
+  const estadoSalvo = localStorage.getItem("estadoGorila");
+  if (estadoSalvo) {
+    const estado = JSON.parse(estadoSalvo);
+    vidaGorila = estado.vidaGorila;
+    humanosRestantes = estado.humanosRestantes;
+    criarHumanos();
+    for (let i = 0; i < humanos.length; i++) {
+      if (!estado.humanosStatus[i]) {
+        humanos[i].classList.remove("vivo");
+        humanos[i].classList.add("morto");
+      }
+    }
+    atualizarStatus();
+  } else {
+    criarHumanos();
+    atualizarStatus();
+  }
+}
+
+document.getElementById("btnAtacar").addEventListener("click", atacar);
+document.getElementById("btnDefender").addEventListener("click", defender);
+document.getElementById("btnCurar").addEventListener("click", curar);
+document.getElementById("btnReiniciar").addEventListener("click", reiniciarJogo);
+
+window.onload = () => {
+  carregarJogo();
+  registrarLog("🦍 Jogo iniciado. Hora da batalha!");
+  setInterval(ataqueDosHumanos, 4000);
+};
+
+
+function reiniciarJogo() {
+  localStorage.removeItem("estadoGorila");
+
+  vidaGorila = 100;
+  humanosRestantes = 100;
+
+  humanosContainer.innerHTML = "";
+  logDiv.innerHTML = "";
+  humanos = [];
+
+  document.querySelectorAll("button").forEach(btn => btn.disabled = false);
+
+  criarHumanos();
+  atualizarStatus();
+  registrarLog("🔁 Jogo reiniciado. Boa sorte!");
+}
 
 
