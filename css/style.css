@@ -67,3 +67,17 @@ h1 {
 #botoes button:hover {
   background-color: #2f6b32;
 }
+
+.humano.vivo {
+  filter: none;
+  opacity: 1;
+}
+
+.humano.morto {
+  filter: grayscale(100%);
+  opacity: 0.3;
+}
+
+.golpe {
+  transform: scale(1.2);
+}
