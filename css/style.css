@@ -98,3 +98,20 @@ h1 {
 #log p {
   margin-bottom: 8px;
 }
+
+#btnReiniciar {
+  background-color: #e53935;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#btnReiniciar:hover {
+  background-color: #b71c1c;
+}
+
