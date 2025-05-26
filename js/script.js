@@ -78,4 +78,11 @@ function registrarLog(mensagem) {
   logDiv.prepend(p);
 }
 
+function animarGorila() {
+  const gorila = document.getElementById("gorila");
+  gorila.classList.add("golpe");
+  setTimeout(() => gorila.classList.remove("golpe"), 200);
+}
+
+
 
