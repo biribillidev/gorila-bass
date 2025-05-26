@@ -6,7 +6,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #1c1c1c, #000000);
+  background-image: url(../assets/background.jpg);
   color: white;
   text-align: center;
 }
@@ -24,11 +24,18 @@ h1 {
 #batalha {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 40px;
-  margin-top: 30px;
   flex-wrap: wrap;
+  margin: 30px auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  max-width: 800px;    
+  width: fit-content;    
 }
+
 
 #gorila {
   width: 150px;
