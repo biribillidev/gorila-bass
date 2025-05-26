@@ -84,5 +84,28 @@ function animarGorila() {
   setTimeout(() => gorila.classList.remove("golpe"), 200);
 }
 
+function verificarFimDeJogo() {
+  if (humanosRestantes === 0) {
+    registrarLog("UM EXTERMINIO FOI FEITO, VITÓRIA DO GORILAAA!");
+    desativarBotoes();
+  } else if (vidaGorila <= 0) {
+    registrarLog("OS HUMANOS FORAM SUPERIORES A VOCÊ, O GORILA FOI DERROTADO.");
+    desativarBotoes();
+  }
+}
+
+function desativarBotoes() {
+  document.querySelectorAll("button").forEach(btn => btn.disabled = true);
+}
+
+function salvarJogo() {
+  const estado = {
+    vidaGorila,
+    humanosRestantes,
+    humanosStatus: humanos.map(h => h.classList.contains("vivo"))
+  };
+  localStorage.setItem("estadoGorila", JSON.stringify(estado));
+}
+
 
 
