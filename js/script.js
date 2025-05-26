@@ -72,5 +72,10 @@ function curar() {
   }
 }
 
+function registrarLog(mensagem) {
+  const p = document.createElement("p");
+  p.textContent = mensagem;
+  logDiv.prepend(p);
+}
 
 
