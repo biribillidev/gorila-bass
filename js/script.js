@@ -20,4 +20,31 @@ function atualizarStatus() {
   document.getElementById("humanosRestantes").textContent = humanosRestantes;
 }
 
+function atacar() {
+  if (humanosRestantes > 0) {
+    let mortos = Math.floor(Math.random() * 10) + 1;
+    mortos = Math.min(mortos, humanosRestantes);
+
+    let mortosAgora = 0;
+    for (let i = 0; i < humanos.length && mortosAgora < mortos; i++) {
+      if (humanos[i].classList.contains("vivo")) {
+        humanos[i].classList.remove("vivo");
+        humanos[i].classList.add("morto");
+        mortosAgora++;
+        somAtaque.currentTime = 0;
+        somAtaque.play();
+      }
+    }
+
+    humanosRestantes -= mortosAgora;
+    registrarLog(`Gorila atacou e derrotou ${mortosAgora} humanos.`);
+    animarGorila();
+    verificarFimDeJogo();
+    salvarJogo();
+    atualizarStatus();
+  }
+}
+
+
+
 
