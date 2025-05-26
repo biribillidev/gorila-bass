@@ -15,4 +15,9 @@ function criarHumanos() {
   }
 }
 
+function atualizarStatus() {
+  document.getElementById("vidaGorila").textContent = vidaGorila;
+  document.getElementById("humanosRestantes").textContent = humanosRestantes;
+}
+
 
