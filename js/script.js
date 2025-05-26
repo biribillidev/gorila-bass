@@ -94,10 +94,6 @@ function verificarFimDeJogo() {
   }
 }
 
-function desativarBotoes() {
-  document.querySelectorAll("button").forEach(btn => btn.disabled = true);
-}
-
 function salvarJogo() {
   const estado = {
     vidaGorila,
