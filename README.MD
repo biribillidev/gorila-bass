@@ -40,3 +40,5 @@ gorilla-bass/
 ## Integrantes do Grupo
 
 - **João Vitor Biribilli Ravelli** – RM: [665594]
+
+Link do repositório : https://github.com/biribillidev/gorila-bass
