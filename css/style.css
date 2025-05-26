@@ -81,3 +81,20 @@ h1 {
 .golpe {
   transform: scale(1.2);
 }
+
+#log {
+  margin-top: 30px;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: left;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#log p {
+  margin-bottom: 8px;
+}
